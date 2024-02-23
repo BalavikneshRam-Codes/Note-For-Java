@@ -6,6 +6,8 @@ public class LinkedList {
         list.insert(1);
         list.insert(2);
         list.insert(3);
+        list.insertAtStart(0);
+        list.insertAt(1, 11);
         list.show();
     }
     public static class LLinkedList {
@@ -34,6 +36,31 @@ public class LinkedList {
                 node = node.next;
             }
             System.out.print(node.data);
+        }
+
+        public void insertAtStart(int data){
+            Node node = new Node();
+            node.data = data;
+            node.next = null;
+
+            node.next = head;
+            head = node;
+        }
+        public void insertAt(int index,int data){
+            Node node = new Node();
+            node.data = data;
+            node.next = null;
+
+            if(index == 0){
+                insertAtStart(data);
+            }else{
+            Node n = head;
+            for(int i = 0;i<index - 1;i++){
+                n = n.next;
+            }
+            node.next = n.next;
+            n.next = node;
+        }
         }
     }
     public static class Node{
