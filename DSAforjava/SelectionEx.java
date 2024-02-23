@@ -1,4 +1,3 @@
-package DSAforjava;
 
 public class SelectionEx {
     public static void main(String args[]){

@@ -1,5 +1,4 @@
 package DSAforjava;
-
 public class LinkedList {
     public static void main(String args[]){
         LLinkedList list = new LLinkedList();
@@ -8,6 +7,7 @@ public class LinkedList {
         list.insert(3);
         list.insertAtStart(0);
         list.insertAt(1, 11);
+        list.delete(1);
         list.show();
     }
     public static class LLinkedList {
@@ -61,6 +61,22 @@ public class LinkedList {
             node.next = n.next;
             n.next = node;
         }
+        }
+
+        public void delete(int index){
+            if(index == 0){
+                head = head.next;
+            }else{
+                Node n = head;
+                Node n1= null;
+                int i =0;
+                for(;i<index - 1;i++){
+                    n = n.next;
+                }
+                n1 = n.next;
+                n.next = n1.next;
+                System.out.println("Deleted Sucessfully..."+n1.data);
+            }
         }
     }
     public static class Node{
