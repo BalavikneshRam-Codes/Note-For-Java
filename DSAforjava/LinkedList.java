@@ -1,4 +1,3 @@
-package DSAforjava;
 public class LinkedList {
     public static void main(String args[]){
         LLinkedList list = new LLinkedList();
