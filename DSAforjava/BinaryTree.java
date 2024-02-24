@@ -4,7 +4,7 @@ public class BinaryTree {
     bt.insert(8);
     bt.insert(7);
     bt.insert(12);
-    bt.insert(15);
+    bt.insert(15 );
     bt.insert(2);
     bt.insert(5);
 
